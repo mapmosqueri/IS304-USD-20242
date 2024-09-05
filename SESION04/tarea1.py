@@ -16,7 +16,11 @@ def has_friday_13(month, year):
     return False
 
 month = int(input("Ingrese el mes (1-12): "))
-year = int(input("Ingrese el año: "))
+while True:
+    year = int(input("Ingrese el año (debe ser 1950 o posterior): "))
+    if year >= 1950:
+        break
+    print("El año debe ser 1950 o posterior. Intente nuevamente.")
 
 result = has_friday_13(month, year)
 
