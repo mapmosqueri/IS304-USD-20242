@@ -5,7 +5,6 @@
 import datetime
 
 def has_friday_13(month, year):
-    
     date = datetime.date(year, month, 13)
     
     if date.day != 13:
@@ -15,3 +14,13 @@ def has_friday_13(month, year):
         return True
     
     return False
+
+month = int(input("Ingrese el mes (1-12): "))
+year = int(input("Ingrese el año: "))
+
+result = has_friday_13(month, year)
+
+if result:
+    print(f"En el mes {month} del año {year} hay un viernes 13.")
+else:
+    print(f"En el mes {month} del año {year} no hay un viernes 13.")
